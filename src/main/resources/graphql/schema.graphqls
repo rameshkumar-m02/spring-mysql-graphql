@@ -1,0 +1,35 @@
+type Mutation {
+    
+    createProduct(productInput:ProductInput):Product
+   
+}
+
+type Query {
+   
+    allProducts:[Product]
+    getProduct(productId:String):Product
+   
+}
+
+
+type Product{
+
+    productId:ID!
+    productName:String!
+    productImage:String
+    currency:String
+    listPrice:Float!
+    salesPrice:Float!
+    
+}
+
+
+input ProductInput{
+    productId:String
+    productName:String
+    productImage:String
+    currency:String
+    listPrice:Float
+    salesPrice:Float
+}
+
